@@ -8,6 +8,7 @@ To understand how to use this starter kit, follow the tutorial at [https://docs.
 
 ## Structure
 
+
 We recommend following this file structure:
 
 * *public/*: Static files like PDFs or audio files
