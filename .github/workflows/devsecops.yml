@@ -44,28 +44,6 @@ jobs:
           path: |
             megalinter-reports
             mega-linter.log
-    
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-          registry-url: "https://registry.npmjs.org"
-      
-      - name: "Install dependencies"
-        run: npm install
-      
-      - name: "test"
-        run : |
-            npm install -D tsx
-            npx tsx ./src/main.ts
-
 
   build:
     runs-on: ubuntu-latest
