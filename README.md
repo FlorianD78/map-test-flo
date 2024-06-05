@@ -1,48 +1,40 @@
 # WorkAdventure Map Starter Kit
 
-![map](./map.png)
+![map](./mapPacman.png)
 
 This is a starter kit to help you build your own map for [WorkAdventure](https://workadventu.re).
 
-To understand how to use this starter kit, follow the tutorial at [https://docs.workadventu.re/map-building/tiled-editor/](https://docs.workadventu.re/map-building/tiled-editor/).
+To understand how to use this starter kit, follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building).
 
 ## Structure
-
-
-We recommend following this file structure:
-
-* *public/*: Static files like PDFs or audio files
-* *src/*: Scripts files or design source files
-* *tilesets/*: All PNG tilesets
+* *public*: Static files like PDFs or audio files
+* *src*: Scripts files
+* *tilesets*: All tilesets
 * *map.tmj*: Map file
-* *map.png*: The map thumbnail used as meta-data
+* *map.png*: The map thumbnail displayed on the in-game map information
 
-If you want to use more than one map file, just add the new map file in the root folder ( we recommend creating a copy of *map.tmj* and editing it, in order to avoid any mistakes).
+If you want to use more than one map file, just add the new map file on root or in a folder.
 
-We recommend using 512x512 images for the map thumbnails.
+we recommend using 500x500 images for the map thumbnails.
 
 If you are going to create custom websites to embed in the map, please reference the HTML files in the `input` option in *vite.config.js*.
 
 ## Requirements
 
-Node.js version >=17
+Node.js version >= 20.10.* (PAS 20.11.*)
 
-## Installation and testing
+## Installation
 
-With npm installed (comes with [node](https://nodejs.org/en/)), run the following commands into a terminal in the root directory of the project:
+With npm installed (comes with [node](https://nodejs.org/en/)), run the following commands into a terminal in the root directory of this project:
 
 ```shell
 npm install
-```
-
-Then, you can test your map by running:
-
-```sh
 npm run dev
 ```
 
-You can also test the optimized map as it will be in production by running:
+## Test production map
 
+You can test the optimized map as it will be in production:
 ```sh
 npm run build
 npm run prod
@@ -59,6 +51,5 @@ This project contains multiple licenses as follows:
 ### About third party assets
 
 If you add third party assets in your map, do not forget to:
-
 1. Credit the author and license with the "tilesetCopyright" property present in the properties of each tilesets in the `map.tmj` file
 2. Add the license text in LICENSE.assets
