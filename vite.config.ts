@@ -79,5 +79,20 @@ export default defineConfig({
             "Cache-Control"                     : "no-cache, no-store, must-revalidate",
         },
         open: "/",
+        cors: {
+            origin: '*',
+            methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+            preflightContinue: false,
+            credentials: true,
+            allowedHeaders: [
+                'X-Requested-With', 
+                'content-type', 
+                'Authorization', 
+                'Origin', 
+                'Content-Type', 
+                'Accept'
+              ],
+            optionsSuccessStatus: 204
+          },
     },
 });
