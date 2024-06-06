@@ -69,6 +69,7 @@ export default defineConfig({
     },
     plugins: [...getMapsOptimizers(maps, optimizerOptions)],
     server: {
+        middlewareMode: 'html',
         proxy: {
             '/api': {
               target: 'https://neosoft-community.github.io',
@@ -76,6 +77,14 @@ export default defineConfig({
               secure: false,
               rewrite: (path) => path.replace(/^\/api/, ''),
             },
+        },
+        configureServer: (server) => {
+            server.middlewares.use((req, res, next) => {
+              if (req.url && req.url.endsWith('.ts')) {
+                res.setHeader('Content-Type', mime.getType('js'));
+              }
+              next();
+            });
         },
         
         host: "localhost",
