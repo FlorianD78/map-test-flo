@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { defineConfig } from "vite";
+import mime from 'mime';
 import { getMaps, getMapsOptimizers, getMapsScripts, LogLevel, OptimizeOptions } from "wa-map-optimizer-vite";
 
 const maps = getMaps();
