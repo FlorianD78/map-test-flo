@@ -69,6 +69,14 @@ export default defineConfig({
     },
     plugins: [...getMapsOptimizers(maps, optimizerOptions)],
     server: {
+        proxy: {
+            '/api': {
+              target: 'https://neosoft-community.github.io',
+              changeOrigin: true,
+              secure: false,
+              rewrite: (path) => path.replace(/^\/api/, ''),
+            },
+        },
         
         host: "localhost",
         headers: {
