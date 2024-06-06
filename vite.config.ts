@@ -80,7 +80,7 @@ export default defineConfig({
         
         host: "localhost",
         headers: {
-            "Access-Control-Allow-Origin"       : "null",
+            "Access-Control-Allow-Origin"       : "*",
             "Access-Control-Allow-Methods"      : "GET, POST, PUT, DELETE, PATCH, OPTIONS",
             "Access-Control-Allow-Headers"      : "X-Requested-With, content-type, Authorization, Origin, Content-Type, Accept, Authorization",
             "Access-Control-Allow-Credentials"  : "true",
